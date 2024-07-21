@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="text" title="Обычный текст">Text</p>
+
+    <span class="simple-text">Text1</span> <!-- тэгом <span> выдялем часть текста, букву для изменения стиля -->
+    <span class="simple-text">Text2</span> <!-- есть еще тэг mark -->
+    <span class="simple-text">Text3</span>
+
+    <!-- <form id="main-form" onsubmit="return checkForm(this)" method="post"> -->
+    <!-- атрибуты для обработки формы на стороне сервера action="" method="" не указываем -->
+    <!-- или прописываем method="post", чтобы данные при передаче не прописывались в url -->
+    <!-- <form id="main-form" onsubmit="checkForm(document.getElementById('name'))"> -->
+    <!-- в данном случае смешиваем html и JS и лучше поменять form -->
+    <form id="main-form" method="post"> 
+
+    <!-- передали name в функцию-->
+        <label for="name">Имя:</label>
+        <input type="text" name="name" place-holder="Имя" id="name"><br><br>
+        <label for="password">Пароль:</label>
+        <input type="password" name="pass" place-holder="Пароль" id="pass"><br><br>
+        <label for="repass">Проверка пароля:</label>
+        <input type="password" name="repass" place-holder="Проверка пароля" id="repass"><br><br>
+        <span>Пол:</span>
+        <input type="radio" name="state" id="male" value="Мужской">
+        <label for="male">Мужской</label>
+        <input type="radio" name="state" id="female" value="Женский">
+        <label for="female">Женский</label><br><br>
+        <div id="fail" style="color: red"></div>
+        <!-- <input type="button" name="submit" value="Готово"> -->
+        <input type="submit" name="submit" value="Готово"> <!-- можно использовать onckick -->
+    </form>
+
+    <script src="js/12_1_Forms.js"></script>
+</body>
+</html>

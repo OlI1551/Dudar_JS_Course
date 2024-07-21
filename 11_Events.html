@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p ondblclick="testFunction()">Нажмите два раза</p> 
+    <!-- атрибут onclick можно добавлять к любому тэгу,
+    кроме head, body, script, потому что они не отображают ничего пользователю,
+    к b, strong, span, div, table, img можно добавлять,
+    атрибуты событийные вызываются, если начать с on - ondblclick, onmouseover, onmouseout,
+    oninput, onsubmit, -->
+    
+    <button onclick="alert('Привет, Ольга!')">Нажми меня!</button>
+    <button onclick="onClickButton()">Вызови функцию!</button>
+    <button onclick="countPressing()">Считай нажатия!</button>
+    <button name="mainButton" onclick="buttonWithObject(this)">Измени кнопку</button> <!-- передаем в функцию объект button -->
+    <br>
+    <br>
+    <input oninput="onInput(this)"/> <!-- передаем в функцию объект input -->
+
+    <button name="colourButton" onclick="colourChange(this)">Смени мой цвет</button>
+    
+    <script src="js/11_1_Events.js"></script>
+</body>
+</html>
